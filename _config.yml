@@ -1,0 +1,8 @@
+# _config.yml
+title: "Shinjuku Showdown Simulator"
+description: "A browser-based battle game: The Strongest of the Modern Era V.S. The Strongest in History!"
+author: "Gabriel A. Barabar"
+baseurl: "" # the subpath of your site, e.g. /game (leave empty for root)
+url: "https://Gabrielieleielieleie1iel.github.io" # update with your GitHub Pages URL
+# Disable Jekyll processing to serve your files without interference
+jekyll: false
