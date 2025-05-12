@@ -1741,7 +1741,7 @@ function updateBoss(dt) {
       else if (action < 0.18) { boss.state = "earthquake"; boss.vy = -10 * SPEED_FACTOR; }
       else if (action < 0.25) { boss.state = "normalJump"; boss.airTime = 0.5; boss.vy = -12 * SPEED_FACTOR; }
       else if (action < 0.6) {
-        boss.state = "regenerating"; boss.stateTimer = 5; regenTimer = regenTicks = 0; boss.vx = boss.vy = 0;
+        boss.state = "regenerating"; boss.stateTimer = 3; regenTimer = regenTicks = 0; boss.vx = boss.vy = 0;
       }
       else if (action < 0.8) {
         boss.state = "laserAttack"; boss.laserAttackPhase = "jump"; boss.airTime = 0.5;
@@ -1871,9 +1871,9 @@ function updateBoss(dt) {
   if (bossPhase === 2) {
     boss.state = "normal";
   } else {
-    boss.stateTimer -= 1 / 60;
-    let regenRate = 0.0075;
-    regenTimer += 1 / 60;
+    boss.stateTimer -= 1 / 100;
+    let regenRate = 0.008;
+    regenTimer += 1 / 100;
 
 	if (regenTimer >= 0.2) {
       regenTimer = 0;
